@@ -1,0 +1,66 @@
+{% extends "index_base.html" %}
+
+{% block head_css %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<!-- Main Content -->
+<div class="container">
+    <!-- Header -->
+    <header class="text-center my-4">
+        <h1>Latest News</h1>
+        <p>Stay updated with the latest news around the world.</p>
+    </header>
+
+    <!-- Featured News Section -->
+    <div class="featured-news row">
+        <div class="col-md-8">
+            <div class="news-card featured">
+                <img src="{{ url_for('static', filename='images/featured.jpg') }}" alt="Featured News" class="img-fluid">
+                <h2>Breaking: Major Event Shakes the World</h2>
+                <p>Details about the major event that is currently making headlines worldwide.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="news-card">
+                <h3>Top Story</h3>
+                <p>Quick summary of another important story.</p>
+            </div>
+            <div class="news-card">
+                <h3>Editor's Pick</h3>
+                <p>Highlight of a story selected by the editorial team.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Grid -->
+    <div class="news-grid row mt-4">
+        <div class="col-md-4">
+            <div class="news-card">
+                <h3>Article 1</h3>
+                <p>Summary of the first article in the grid.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="news-card">
+                <h3>Article 2</h3>
+                <p>Summary of the second article in the grid.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="news-card">
+                <h3>Article 3</h3>
+                <p>Summary of the third article in the grid.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/news.js') }}"></script>
+{% endblock %}
